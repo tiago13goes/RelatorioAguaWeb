@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiap Filmes</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>SABESP</h1>
+    </header>
+
+    <div id="hero">
+        <div class="texto">
+            <h1 class="titulo"> Quem é a Sabesp</h1>
+            <p>
+                A Companhia de Saneamento Básico do Estado de São Paulo – Sabesp é uma empresa de economia mista, de capital aberto, que tem como principal acionista o Governo do Estado de São Paulo. A Sabesp é, atualmente, uma das mais significativas companhias do mercado
+                de saneamento de todo o mundo. As etapas dos sistemas de captação, tratamento, armazenamento e distribuição são monitoradas para que a água fornecida atenda e supere </p>
+        </div>
+    </div>
+    </br>
+
+    </br>
+    <main>
+        <section>
+            <h2>Relatórios de qualidade de água de São Paulo</h2>
+            <div class="">
+                <label>Selecione os campos e veja os gráficos: <br></label>
+                <select id="slcCidade">
+                    <option value="Alto Tietê" selected>Alto Tietê</option>
+                    <option value="Cantareira">Cantareira</option>
+                    <option value="Guarapiranga">Guarapiranga</option>
+                    <option value="Marsilac">Marsilac</option>
+                    <option value="Poço Oriental">Poço Oriental</option>
+                    <option value="Rio Claro">Rio Claro</option>
+                </select>
+
+                <select id="slcTipoResultado">
+                    <option value="turbidez" selected>Turbidez</option>
+                    <option value="cor">Cor</option>
+                    <option value="cloro">Cloro</option>
+                    <option value="coliforme">Coliforme</option>
+                </select>
+
+                <div style="width: 80%; margin-bottom: 50px">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="javascript/index.js"></script>
+
+    <script>
+        $(() => {
+            init()
+        })
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap');
+:root {
+    --bg: white;
+    --bg2: white;
+    --primary: #1d8dd9;
+    --base: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--base);
+}
+
+body {
+    background-color: var(--bg);
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    background-color: var(--bg2);
+}
+
+header h1 {
+    color: var(--primary);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    margin-left: 4rem;
+    padding-top: 1rem;
+}
+
+header nav {
+    display: flex;
+    flex-grow: 1;
+    padding-bottom: 1rem;
+}
+
+header ul {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+
+nav li {
+    float: right;
+    text-align: end;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+nav .ativo {
+    border-bottom: var(--primary) 3px solid;
+    padding-bottom: .5rem;
+}
+
+li {
+    list-style: none;
+    margin: 0 2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+#hero {
+    position: relative;
+    height: 18rem;
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* pseudo-elemento */
+
+#hero::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: url(../imagens/sabesp_patio.jfif) center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: 30%;
+    filter: opacity(.4);
+    z-index: -1;
+    box-shadow: inset 0px -100px 100px var(--bg);
+}
+
+#hero img {
+    margin: 20%;
+}
+
+.texto {
+    margin-left: 2%;
+}
+
+.titulo {
+    margin: 2%;
+    color: #1d8dd9
+}
+
+.textocinza {
+    margin: 2%;
+    color: #3de;
+}
+
+.ficha {
+    background-color: #3C3C3C;
+    padding: 1%;
+    border-radius: 5px;
+}
+
+#hero p {
+    width: 60%;
+    margin: 2%;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: justify;
+    ;
+}
+
+main {
+    margin: 0 4rem;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    border-left: var(--primary) solid 5px;
+    line-height: 20px;
+    padding-left: .2rem;
+    margin-bottom: 1rem;
+}
+
+.lista-de-filmes {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.elenco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: .5rem;
+    background-color: #3C3C3C;
+    padding: 1%;
+    border-radius: 5%;
+}
+
+.elenco * {
+    margin: .3rem 0;
+}
+
+.elenco .titulo {
+    font-size: 1.5rem;
+}
+
+.poster {
+    width: 190px;
+    border-radius: 100%;
+}
+
+.elenco .subtitulo {
+    filter: opacity(.6);
+    line-height: 24px;
+}
+
+.nota {
+    display: flex;
+    justify-content: center;
+}
+
+.nota span {
+    font-size: 1rem;
+    align-self: center;
+    margin-left: .3rem;
+}
+
+.dourado {
+    color: gold;
+}
+
+.botao {
+    background-color: var(--primary);
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    padding: .5rem 0;
+    transition: filter .5s ease-in-out;
+}
+
+.botao:hover {
+    filter: drop-shadow(0px 0px 4px var(--primary)) drop-shadow(0px 0px 9px var(--primary));
+}
+
+.botaotriplo {
+    background-color: var(--primary);
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    padding: .5rem 0;
+    transition: filter .5s ease-in-out;
+    margin: 2%;
+}
+
+svg {
+    margin: 3px;
+    float: center;
+}
+
+.botaotriplo:hover {
+    filter: drop-shadow(0px 0px 4px var(--primary)) drop-shadow(0px 0px 9px var(--primary));
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 588px) {
+    #hero p {
+        padding: 1rem;
+    }
+}
